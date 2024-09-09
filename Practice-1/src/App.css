@@ -1,0 +1,186 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --red: #d01c28;
+  --gray: #2e2e2e;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden; /* Horizontal overflow hidden for smaller screens */
+}
+
+.logo img {
+  height: 80px;
+}
+
+button {
+  all: unset;
+  padding: 6px 16px;
+  background: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 20px; /* Adds padding to container on smaller screens */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  align-items: center;
+  padding: 0 20px; /* Adds padding to navigation on smaller screens */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.brand-icons img {
+  height: 40px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 72px);
+  padding: 0 20px; /* Adds padding to hero section on smaller screens */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; /* Reduced left margin for hero content on smaller screens */
+}
+
+.hero h1 {
+  font-weight: 800;
+  line-height: 1.2; /* Adjusted line height for responsiveness */
+  font-size: 48px; /* Reduced font size for smaller screens */
+}
+
+.hero p {
+  font-weight: 500;
+  color: var(--gray);
+  max-width: 100%; /* Ensures paragraph text doesn't overflow on smaller screens */
+}
+
+.hero-btn {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+  gap: 20px; /* Reduced gap between buttons for smaller screens */
+  margin-top: 10px;
+}
+
+.hero-btn button {
+  font-size: 14px; /* Reduced font size for buttons on smaller screens */
+}
+
+.secondary-btn {
+  background: transparent;
+  color: gray;
+  border: 1px solid gray;
+  padding: 5px 12px; /* Adjusted padding for secondary button on smaller screens */
+}
+
+.shopping p {
+  font-size: 12px; /* Reduced font size for shopping paragraph on smaller screens */
+  margin-bottom: 4px; /* Reduced margin bottom for shopping paragraph on smaller screens */
+  margin-top: 6px; /* Reduced margin top for shopping paragraph on smaller screens */
+}
+
+.brand-icons {
+  display: flex;
+  gap: 12px; /* Reduced gap between brand icons on smaller screens */
+}
+
+.hero-image img {
+  height: auto; /* Allows hero image to scale with width on smaller screens */
+  max-width: 100%; /* Ensures hero image doesn't overflow on smaller screens */
+  margin-top: 40px; /* Reduced top margin for hero image on smaller screens */
+  margin-right: 0; /* No right margin for hero image on smaller screens */
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px; /* Further reduced padding for container on tablets */
+  }
+
+  .hero h1 {
+    font-size: 40px; /* Adjusted font size for hero heading on tablets */
+  }
+
+  .hero-content {
+    margin-left: 15px; /* Further reduced left margin for hero content on tablets */
+  }
+
+  .hero-btn button {
+    font-size: 14px; /* Maintaining button font size for tablets */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px; /* Minimal padding for container on mobile devices */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Stack navigation links vertically on mobile */
+    gap: 10px; /* Reduced gap between navigation links on mobile */
+  }
+
+  .hero {
+    flex-direction: column; /* Stack hero content vertically on mobile */
+    text-align: center; /* Center align hero content on mobile */
+    height: auto; /* Allow hero section to expand with content on mobile */
+  }
+
+  .hero-content {
+    margin-left: 0; /* No left margin for hero content on mobile */
+    margin-top: 20px; /* Increased top margin for hero content on mobile */
+  }
+
+  .hero h1 {
+    font-size: 32px; /* Reduced font size for hero heading on mobile */
+    line-height: 1.1; /* Adjusted line height for hero heading on mobile */
+  }
+
+  .hero-btn {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 10px; /* Reduced gap between buttons on mobile */
+    margin-top: 20px; /* Increased top margin for buttons on mobile */
+  }
+
+  .hero-btn button {
+    font-size: 14px; /* Reduced font size for buttons on mobile */
+    padding: 10px 16px; /* Adjusted padding for buttons on mobile */
+  }
+
+  .shopping p {
+    font-size: 12px; /* Further reduced font size for shopping paragraph on mobile */
+    margin-bottom: 2px; /* Further reduced margin bottom for shopping paragraph on mobile */
+    margin-top: 4px; /* Further reduced margin top for shopping paragraph on mobile */
+  }
+
+  .brand-icons {
+    gap: 8px; /* Further reduced gap between brand icons on mobile */
+  }
+
+  .hero-image img {
+    margin-top: 20px; /* Adjusted top margin for hero image on mobile */
+  }
+}
